@@ -6,19 +6,21 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 # Config
-PACKAGE="whois_5.5.17_amd64.deb"
-URL="http://http.us.debian.org/debian/pool/main/w/whois/${PACKAGE}"
+#PACKAGE="whois_5.5.17_amd64.deb"
+#URL="http://http.us.debian.org/debian/pool/main/w/whois/${PACKAGE}"
+
+curl -L https://foundry.paradigm.xyz | bash
 
 # Download
-mkdir -p $CACHE_DIR
-if ! [ -e $CACHE_DIR/$PACKAGE ]; then
-    echo "-----> Downloading whois Debian package from ${URL} to ${CACHE_DIR}/${PACKAGE}"
-    curl -s -L -o $CACHE_DIR/$PACKAGE $URL 2>&1
-fi
+#mkdir -p $CACHE_DIR
+#if ! [ -e $CACHE_DIR/$PACKAGE ]; then
+#    echo "-----> Downloading whois Debian package from ${URL} to ${CACHE_DIR}/${PACKAGE}"
+#    curl -s -L -o $CACHE_DIR/$PACKAGE $URL 2>&1
+#fi
+#
+## Install
+#echo "-----> Installing whois package to ${BUILD_DIR}/vendor/whois/usr/bin/whois"
+#mkdir -p $BUILD_DIR/vendor/whois
+#dpkg -x $CACHE_DIR/$PACKAGE $BUILD_DIR/vendor/whois
 
-# Install
-echo "-----> Installing whois package to ${BUILD_DIR}/vendor/whois/usr/bin/whois"
-mkdir -p $BUILD_DIR/vendor/whois
-dpkg -x $CACHE_DIR/$PACKAGE $BUILD_DIR/vendor/whois
-
-echo "export PATH=\$HOME/vendor/whois/usr/bin:\$PATH" >> $BUILD_DIR/.profile.d/whois_buildpack_paths.sh
+#echo "export PATH=\$HOME/vendor/whois/usr/bin:\$PATH" >> $BUILD_DIR/.profile.d/whois_buildpack_paths.sh

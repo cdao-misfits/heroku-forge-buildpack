@@ -12,6 +12,8 @@ CACHE_DIR=$2
 
 curl -L https://foundry.paradigm.xyz | bash
 
+foundryup
+
 echo "-------> Done installing forge"
 
 # Download

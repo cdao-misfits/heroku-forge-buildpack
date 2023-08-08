@@ -2,6 +2,7 @@
 
 set -e
 
+echo "-------> Installing forge"
 BUILD_DIR=$1
 CACHE_DIR=$2
 
@@ -10,6 +11,8 @@ CACHE_DIR=$2
 #URL="http://http.us.debian.org/debian/pool/main/w/whois/${PACKAGE}"
 
 curl -L https://foundry.paradigm.xyz | bash
+
+echo "-------> Done installing forge"
 
 # Download
 #mkdir -p $CACHE_DIR

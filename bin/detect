@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "forge"
+exit 0

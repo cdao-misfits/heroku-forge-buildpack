@@ -20,8 +20,6 @@ URL=https://foundry.paradigm.xyz
 
 curl -L https://foundry.paradigm.xyz | bash
 
-which foundryup
-
 echo "-------> exec shell"
 exec $SHELL
 

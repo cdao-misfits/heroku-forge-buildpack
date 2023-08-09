@@ -19,7 +19,7 @@ fi
 
 #curl -L https://foundry.paradigm.xyz | bash
 
-foundryup
+
 
 echo "-------> Done installing forge"
 
@@ -29,5 +29,7 @@ echo "-------> Done installing forge"
 #echo "-----> Installing whois package to ${BUILD_DIR}/vendor/whois/usr/bin/whois"
 mkdir -p $BUILD_DIR/vendor/forge
 dpkg -x $CACHE_DIR/forge $BUILD_DIR/vendor/forge
+
+foundryup
 
 #echo "export PATH=\$HOME/vendor/forge/usr/bin:\$PATH" >> $BUILD_DIR/.profile.d/whois_buildpack_paths.sh

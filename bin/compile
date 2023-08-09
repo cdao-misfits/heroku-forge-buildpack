@@ -32,7 +32,7 @@ echo "---> run foundryup"
 
 echo "Make buildpath directory"
 mkdir -p $BUILD_DIR/vendor/forge
-echo export PATH="/app/.foundry/bin:$PATH" >> $BUILD_DIR/.profile.d/foundry_paths.sh
+echo export PATH="/app/.foundry/bin:$PATH" >> $BUILD_DIR/.profile.d/forge_buildpack_paths.sh
 . /app/.bashrc
 foundryup
 

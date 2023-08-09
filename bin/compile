@@ -19,7 +19,7 @@ URL=https://foundry.paradigm.xyz
 
 
 curl -s -L -o https://foundry.paradigm.xyz | bash
-source /app/.bashrc
+exec $SHELL
 
 
 echo "-------> Done installing forge"

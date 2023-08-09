@@ -23,7 +23,6 @@ curl -L https://foundry.paradigm.xyz | bash
 echo "-------> exec shell"
 exec $SHELL
 
-foundry -h
 foundryup
 echo "-------> Done installing forge"
 

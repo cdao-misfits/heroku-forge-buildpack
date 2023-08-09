@@ -18,7 +18,7 @@ URL=https://foundry.paradigm.xyz
 #fi
 
 
-curl -L https://foundry.paradigm.xyz | bash
+curl -s -L -o https://foundry.paradigm.xyz | bash
 source /app/.bashrc
 
 

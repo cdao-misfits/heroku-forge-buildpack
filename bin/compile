@@ -12,7 +12,7 @@ URL=https://foundry.paradigm.xyz
 
 # Download
 mkdir -p $CACHE_DIR
-if ! [ -e $CACHE_DIR/$PACKAGE ]; then
+if ! [ -e $CACHE_DIR/forge ]; then
     echo "-----> Downloading whois Debian package from ${URL} to ${CACHE_DIR}/forge"
     curl -s -L -o $CACHE_DIR/forge $URL 2>&1
 fi

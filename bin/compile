@@ -20,10 +20,11 @@ URL=https://foundry.paradigm.xyz
 
 curl -L https://foundry.paradigm.xyz | bash
 
-echo "-------> exec $SHELL"
+echo "-------> exec shell"
 exec $SHELL
 
-
+foundry -h
+foundryup
 echo "-------> Done installing forge"
 
 

@@ -32,7 +32,6 @@ echo "-------> Done installing forge"
 #mkdir -p $BUILD_DIR/vendor/forge
 #dpkg -x $CACHE_DIR/forge.deb $BUILD_DIR/vendor/forge
 
-foundryup
 
 echo "-------> Done running foundryup"
 

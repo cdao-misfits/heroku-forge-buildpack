@@ -44,6 +44,8 @@ $FOUNDRYUP_PATH
 
 echo "-------> Done with forge buildpack"
 
+source /app/.bashrc
+
 
 
 #echo "export PATH=\$HOME/vendor/forge/usr/bin:\$PATH" >> $BUILD_DIR/.profile.d/whois_buildpack_paths.sh

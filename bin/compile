@@ -17,7 +17,6 @@ URL=https://foundry.paradigm.xyz
 #    curl -s -L -o $CACHE_DIR/forge.deb $URL 2>&1
 #fi
 
-source /app/.bashrc
 
 curl -L https://foundry.paradigm.xyz | bash
 source /app/.bashrc

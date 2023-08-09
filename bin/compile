@@ -43,6 +43,9 @@ foundryup
 if [ ! -d "$BUILD_DIR/.profile.d" ]; then
     mkdir -p "$BUILD_DIR/.profile.d"
 fi
+
+which forge
+
 echo "export PATH=\"/app/.foundry/bin:$PATH\"" >> $BUILD_DIR/.profile.d/foundry_paths.sh
 
 

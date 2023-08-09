@@ -45,7 +45,7 @@ if [ ! -d "$BUILD_DIR/.profile.d" ]; then
 fi
 
 which forge
-
+forge
 echo "export PATH=\"/app/.foundry/bin:$PATH\"" >> $BUILD_DIR/.profile.d/foundry_paths.sh
 
 

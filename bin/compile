@@ -44,7 +44,7 @@ $FOUNDRYUP_PATH
 
 echo "-------> Done with forge buildpack"
 
-source /app/.bashrc
+. /app/.bashrc
 
 
 

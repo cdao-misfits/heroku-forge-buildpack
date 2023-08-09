@@ -1,5 +1,4 @@
 #!/bin/sh
 
-echo "DETECT FORGE"
-echo forge
+echo "forge"
 exit 0

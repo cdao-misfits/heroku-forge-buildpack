@@ -24,6 +24,8 @@ echo "-------> exec shell"
 exec $SHELL
 
 
+export PATH="/app/.foundry/bin:$PATH"
+
 
 echo "---> run foundryup"
 ## Install
@@ -31,12 +33,17 @@ echo "---> run foundryup"
 #dpkg -x $CACHE_DIR/forge.deb $BUILD_DIR/vendor/forge
 
 echo "Make buildpath directory"
-mkdir -p $BUILD_DIR/vendor/forge
+# mkdir -p $BUILD_DIR/vendor/forge
 #echo export PATH="/app/.foundry/bin:$PATH" >> $BUILD_DIR/.profile.d/forge_buildpack_paths.sh
 #echo "export PATH=/app/.foundry/bin:\$PATH" >> $BUILD_DIR/.profile.d/whois_buildpack_paths.sh
-echo "export PATH=\$HOME/.foundry/bin:\$PATH" >> $BUILD_DIR/.profile.d/forge_buildpack_paths.sh
+# echo "export PATH=\$HOME/.foundry/bin:\$PATH" >> $BUILD_DIR/.profile.d/forge_buildpack_paths.sh
 . /app/.bashrc
 foundryup
+# Ensure the PATH persists for future steps/buildpacks
+if [ ! -d "$BUILD_DIR/.profile.d" ]; then
+    mkdir -p "$BUILD_DIR/.profile.d"
+fi
+echo "export PATH=\"/app/.foundry/bin:$PATH\"" >> $BUILD_DIR/.profile.d/foundry_paths.sh
 
 
 

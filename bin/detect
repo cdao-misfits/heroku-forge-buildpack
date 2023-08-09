@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "forge"
+echo forge
 exit 0

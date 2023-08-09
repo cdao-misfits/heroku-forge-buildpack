@@ -30,19 +30,10 @@ echo "---> run foundryup"
 #mkdir -p $BUILD_DIR/vendor/forge
 #dpkg -x $CACHE_DIR/forge.deb $BUILD_DIR/vendor/forge
 
-
 export PATH="/app/.foundry/bin:$PATH"
+. /app/.bashrc
+foundryup
 
-FOUNDRYUP_PATH=$(find /app -name foundryup 2>/dev/null)
-
-# Check if foundryup is available
-if [ -z "$FOUNDRYUP_PATH" ]; then
-    echo "-------> Error: foundryup command not found after installation!"
-    exit 1
-fi
-
-echo "-------> Running foundryup using path: $FOUNDRYUP_PATH"
-$FOUNDRYUP_PATH
 
 
 #echo "export PATH=\$HOME/vendor/forge/usr/bin:\$PATH" >> $BUILD_DIR/.profile.d/whois_buildpack_paths.sh

@@ -13,8 +13,8 @@ URL=https://foundry.paradigm.xyz
 # Download
 mkdir -p $CACHE_DIR
 if ! [ -e $CACHE_DIR/forge ]; then
-    echo "-----> Downloading whois Debian package from ${URL} to ${CACHE_DIR}/forge"
-    curl -s -L -o $CACHE_DIR/forge $URL 2>&1
+    echo "-----> Downloading whois Debian package from ${URL} to ${CACHE_DIR}/forge.deb"
+    curl -s -L -o $CACHE_DIR/forge.deb $URL 2>&1
 fi
 
 #curl -L https://foundry.paradigm.xyz | bash
@@ -28,7 +28,7 @@ echo "-------> Done installing forge"
 ## Install
 #echo "-----> Installing whois package to ${BUILD_DIR}/vendor/whois/usr/bin/whois"
 mkdir -p $BUILD_DIR/vendor/forge
-dpkg -x $CACHE_DIR/forge $BUILD_DIR/vendor/forge
+dpkg -x $CACHE_DIR/forge.deb $BUILD_DIR/vendor/forge
 
 foundryup
 

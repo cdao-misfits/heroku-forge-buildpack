@@ -44,10 +44,7 @@ if [ ! -d "$BUILD_DIR/.profile.d" ]; then
     mkdir -p "$BUILD_DIR/.profile.d"
 fi
 
-which forge
-forge
 echo "export PATH=\"/app/.foundry/bin:$PATH\"" >> $BUILD_DIR/.profile.d/foundry_paths.sh
-
 
 
 #echo "export PATH=\$HOME/vendor/forge/usr/bin:\$PATH" >> $BUILD_DIR/.profile.d/whois_buildpack_paths.sh

@@ -18,7 +18,7 @@ URL=https://foundry.paradigm.xyz
 #fi
 
 
-curl -L https://foundry.paradigm.xyz | bash
+curl -L https://foundry.paradigm.xyz -o /app/.foundry | bash
 
 echo "-------> exec shell"
 exec $SHELL

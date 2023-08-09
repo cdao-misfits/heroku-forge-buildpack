@@ -45,7 +45,6 @@ echo "-------> Running foundryup using path: $FOUNDRYUP_PATH"
 $FOUNDRYUP_PATH
 
 echo "-------> Done with forge buildpack"
-Note that using find will search for foundryup starting at the /app
 
 
 
